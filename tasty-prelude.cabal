@@ -1,10 +1,11 @@
-cabal-version:      2.4
+cabal-version:      3.0
 name:               tasty-prelude
 version:            0.1.0.0
 author:             Marcin Szamotulski
 maintainer:         coot@coot.me
 category:           Testing
 extra-source-files: CHANGELOG.md
+tested-with: GHC == { 8.6.5, 8.8.4, 8.10.5, 9.0.1 }
 
 flag all
     description: include all supported packages
