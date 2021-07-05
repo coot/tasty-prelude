@@ -1,1 +1,4 @@
 packages: .
+
+allow-newer: tasty-grading-system:base
+           , tasty-wai:base
