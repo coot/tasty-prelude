@@ -187,7 +187,7 @@ library
                         , tasty-golden:Test.Tasty.Golden.Advanced
                         , tasty-golden:Test.Tasty.Golden.Manage
 
-    if flag(grading-system) || flag(all)
+    if (flag(grading-system) || flag(all)) && impl(ghc >= 8.8)
       build-depends:      tasty-grading-system
       reexported-modules: tasty-grading-system:Test.Tasty.Grade
       cpp-options:      -DTASTY_GRADING_SYSTEM
