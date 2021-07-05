@@ -1,0 +1,5 @@
+tests:         True
+documentation: True
+
+tasty-prelude
+  ghc-options: -Werror
