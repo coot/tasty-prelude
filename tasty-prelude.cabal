@@ -78,7 +78,12 @@ flag inspection-testing
     manual:  True
 
 flag leancheck
-    description: tasty-leancheck  
+    description: tasty-leancheck support
+    default: False
+    manual:  True
+
+flag lua
+    description: tasty-lua support  
     default: False
     manual:  True
 
@@ -216,6 +221,13 @@ library
     if flag(leancheck) || flag(all)
       build-depends:      tasty-leancheck
       reexported-modules: tasty-leancheck:Test.Tasty.LeanCheck
+
+    if flag(lua) || flag(all)
+      build-depends:      tasty-lua
+      reexported-modules: tasty-lua:Test.Tasty.Lua
+                        , tasty-lua:Test.Tasty.Lua.Core
+                        , tasty-lua:Test.Tasty.Lua.Module
+                        , tasty-lua:Test.Tasty.Lua.Translate
 
     if flag(quickcheck) || flag(all)
       build-depends:      tasty-quickcheck
