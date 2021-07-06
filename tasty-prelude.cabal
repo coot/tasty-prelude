@@ -1,11 +1,22 @@
 cabal-version:      3.0
 name:               tasty-prelude
 version:            0.1.0.0
-author:             Marcin Szamotulski
-maintainer:         coot@coot.me
+synopsis:
+  Unopinionated top-level entry point to tasty ecosystem.
+description:
+  The package exposes 'Tast.Tasty.Prelude' module build out of several modules
+  accross various tasty packages and re-exports modules from many packages
+  available in the tasty ecosystem.
 category:           Testing
-extra-source-files: CHANGELOG.md
-tested-with: GHC == { 8.6.5, 8.8.4, 8.10.5, 9.0.1 }
+author:             Marcin Szamotulski <coot@coot.me>
+maintainer:         Marcin Szamotulski <coot@coot.me>
+license:            MPL-2.0
+license-file:       LICENSE
+copyright:          (c) 2021, Marcin Szamotulski
+homepage:           https://github.com/coot/tasty-prelude
+bug-reports:        https://github.com/coot/tasty-prelude/issues
+extra-source-files: README.md, CHANGELOG.md
+tested-with:        GHC == { 8.6.5, 8.8.4, 8.10.5, 9.0.1 }
 
 flag all
     description: include all supported packages
@@ -147,7 +158,7 @@ flag wai
 
 library
     exposed-modules:      Test.Tasty.Prelude
-    build-depends:        base,
+    build-depends:        base < 5,
                           tasty,
                           tasty-expected-failure,
                           tasty-focus,
