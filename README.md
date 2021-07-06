@@ -20,5 +20,4 @@ included in `Test.Tasty.Prelude`):
 * `tasty-hedgehog` (if _cabal flag_ `hedgehog` is set)
 * `tasty-golden` (if _cabal flag_ `golden` is set)
 * `tasty-silver` (if _cabal flag_ `silver` is set)
-* and many others, check [cabal
-  file](https://github.com/coot/tasty-prelude/blob/master/tasty-prelude.cabal):
+* and [many others](https://hackage.haskell.org/package/tasty-prelude/dependencies)
