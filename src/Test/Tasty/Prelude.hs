@@ -15,3 +15,6 @@ import           Test.Tasty.Discover as Tasty
 #ifdef TASTY_GRADING_SYSTEM
 import           Test.Tasty.Grade as Tasty
 #endif
+#ifdef TASTY_CHECKLIST
+import           Test.Tasty.Checklist as Tasty
+#endif

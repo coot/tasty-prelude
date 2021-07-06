@@ -27,6 +27,11 @@ flag bench
     default: False
     manual:  True
 
+flag checklist
+    description: tasty-checklist support
+    default: False
+    manual:  True
+
 flag dejafu
     description: tasty-dejafu support
     default: False
@@ -176,6 +181,11 @@ library
     if flag(bench) || flag(all)
       build-depends:      tasty-bench
       reexported-modules: tasty-bench:Test.Tasty.Bench
+
+    if flag(checklist) || flag(all)
+      build-depends:      tasty-checklist
+      reexported-modules: tasty-checklist:Test.Tasty.Checklist
+      cpp-options:      -DTASTY_CHECKLIST
 
     if flag(dejafu) || flag(all)
       build-depends:      tasty-dejafu
