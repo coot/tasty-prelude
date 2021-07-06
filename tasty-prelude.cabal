@@ -124,6 +124,11 @@ flag test-reporter
     default: False
     manual:  True
 
+flag th
+    description: tasty-th support
+    default: False
+    manual:  True
+
 flag tmux
     description: tasty-tmux support
     default: False
@@ -274,6 +279,10 @@ library
     if flag(test-reporter) || flag(all)
       build-depends:      tasty-test-reporter
       reexported-modules: tasty-test-reporter:Test.Tasty.Runners.Reporter
+
+    if flag(th) || flag(all)
+      build-depends:      tasty-th
+      reexported-modules: tasty-th:Test.Tasty.TH
 
     if flag(tmux) || flag(all)
       build-depends:      tasty-tmux
